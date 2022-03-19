@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    Font-size: 14px;
+    background-image: url(images/bg-mobile.png); 
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    
+}
+.fylo{
+    background: hsl(228, 56%, 26%);
+    padding: 2rem;
+    padding-right: 8rem;
+    border-radius: 10px 100px 10px 10px;
+}
+.archivos{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.iconos{
+    margin-right: 12px; 
+    background: hsl(229, 57%, 11%);
+    padding: 10px;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.store{
+    background: hsl(228, 56%, 26%);
+    margin-top: 1rem;
+    padding: 3rem 2rem;
+    color:  hsl(243, 100%, 93%);
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+.progreso{
+    width: 100%;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    margin: 13px 0;
+    padding: 3px;
+}
+.barra{
+    width: 81%;
+    border-radius: 10px;
+    background: linear-gradient(85deg,hsl(6, 100%, 80%), hsl(335, 100%, 65%)) ;
+    height: 15px;
+    position: relative;
+}
+.barra::before{
+   content: "";
+   width: 12px;
+   height: 12px;
+   background: white;
+   position: absolute;
+   border-radius: 50px;
+   right: 2px;
+   top: 50%;
+   transform: translateY(-50%);
+
+}
+.numeros{
+    display: flex;
+    justify-content: space-between;
+}
+.float{
+    background: white;
+    color: hsl(229, 57%, 11%);
+    position: absolute;
+    padding: 15px;
+    border-radius: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+     width: 170px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.float span{
+    font-size: 40px;
+    font-weight: 700;
+}
+@media (min-width: 1000px) {
+    .main{
+        display: flex;
+        align-items: end;
+    }
+    body{
+      background:url(images/bg-desktop.png);
+      background-color: hsl(229, 57%, 11%);
+      background-size: contain;
+      background-position: bottom; 
+      background-repeat: no-repeat; 
+    }
+    .fylo{
+        margin-right: 30px;
+        height: 235px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .store {
+        width: 553px;
+        text-align: start;
+        height: 180px;
+    }
+    .float{
+        left: 89%;
+        top: -37px;
+        transform: translateX(-89%);
+        border-radius: 6px 6px 0px 6px;
+    }
+    .float::before{
+        content: "";
+        width: 0; 
+        height: 0; 
+        bottom: -18px;
+        position: absolute;
+        right: 0;
+        border-right: 40px solid #ffffff;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent; 
+    }
+    .iconos:hover{
+       background: hsl(243, 100%, 93%);
+       opacity: 50%;
+       cursor: pointer;
+    }
+}
